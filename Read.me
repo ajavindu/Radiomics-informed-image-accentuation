@@ -1,0 +1,16 @@
+# Voxel-wise Radiomics Feature Extraction
+
+This project provides a Python tool for extracting voxel-wise radiomics features from 3D MRI images using corresponding tumor masks. The tool leverages [SimpleITK](https://simpleitk.org/) for image handling and [PyRadiomics](https://pyradiomics.readthedocs.io/) for feature extraction (specifically GLCM and GLDM features).
+
+## Features
+
+- **Resampling:** Automatically resamples the mask image to match the geometry of the MRI if necessary.
+- **Voxel-wise Extraction:** Computes voxel-based GLCM and GLDM features without cropping the original MRI dimensions.
+- **Output:** Saves each feature map as a separate 3D NIfTI (`.nii.gz`) file retaining the original MRI's size, spacing, and orientation.
+
+## Requirements
+
+- Python 3.6+
+- [SimpleITK](https://pypi.org/project/SimpleITK/)
+- [PyRadiomics](https://pypi.org/project/pyradiomics/)
+
